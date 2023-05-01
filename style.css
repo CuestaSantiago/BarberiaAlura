@@ -1,0 +1,61 @@
+body {
+  background: rgb(44, 44, 60);
+  background: linear-gradient(
+    135deg,
+    rgba(44, 44, 60, 1) 21%,
+    rgba(2, 0, 36, 1) 49%,
+    rgba(0, 212, 255, 1) 97%
+  );
+}
+.principal {
+  background: #cccccc4a;
+  padding: 20px;
+  border-radius: 10ch;
+  margin-top: 10px;
+}
+#banner {
+  max-height: 600px;
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  max-width: 60ch;
+}
+
+em strong {
+  color: #ece2e2e3;
+}
+
+#mision {
+  font-size: 20px;
+}
+.diferencial {
+  /* background: #fff; */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  color: #adadc4;
+}
+.items {
+  font-style: italic;
+}
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  color: #adadc4;
+}
+.imagen-diferenciales {
+  width: 50%;
+}
