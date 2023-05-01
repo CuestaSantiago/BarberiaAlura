@@ -7,21 +7,31 @@ body {
     rgba(0, 212, 255, 1) 97%
   );
 }
+
+.titulo_principal {
+  padding-left: 30px;
+}
+.titulo_centralizado {
+  text-align: center;
+}
 .principal {
   background: #cccccc4a;
   padding: 20px;
   border-radius: 10ch;
   margin-top: 10px;
 }
+.texto_principal {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.3em;
+  width: 40%;
+  margin: 2%;
+}
 #banner {
   max-height: 600px;
   width: 90%;
   display: block;
   margin: auto;
-}
-
-h1 {
-  text-align: center;
 }
 
 p {
@@ -35,17 +45,20 @@ em strong {
 
 #mision {
   font-size: 20px;
+  max-width: 50ch;
+}
+
+.img_principal {
+  width: 55%;
 }
 .diferencial {
-  /* background: #fff; */
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-h2 {
-  text-align: center;
-  color: #adadc4;
+h3 {
+  color: #ece2e2e3;
 }
 .items {
   font-style: italic;
@@ -54,7 +67,7 @@ ul {
   display: inline-block;
   vertical-align: top;
   width: 20%;
-  color: #adadc4;
+  color: #ece2e2e3;
 }
 .imagen-diferenciales {
   width: 50%;

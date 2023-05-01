@@ -1,3 +1,2 @@
-const fecha = document.getElementById("anio-actual")
-fecha.innerHTML = new Date().getFullYear()
+document.getElementById("anio-actual").innerHTML = new Date().getFullYear()
 
