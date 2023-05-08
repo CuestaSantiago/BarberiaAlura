@@ -1,10 +1,9 @@
-const title_page = "Barbería Alura";
-const menu = ["home", "productos", "contacto"];
+let title_page = "";
+let alt= "logo de la barbería Alura";
+const menu = ["Home", "Productos", "Contacto"];
 const menuDireccion = ["index", "productos", "contacto"];
 var anio_actual = new Date().getFullYear();
 var copy_right = `&copy Copyright Barbería Alura ${anio_actual}`;
-document.getElementById("title_page").innerHTML = title_page;
-document.getElementById("copy-right").innerHTML = copy_right;
 
 function cargarMenuPrincipal() {
   let menuPrincipal = "<ul>";
@@ -16,7 +15,8 @@ function cargarMenuPrincipal() {
     }
   }
   menuPrincipal += "</ul>";
-  document.getElementById("menuPrincipal").innerHTML = menuPrincipal;
+
+  return menuPrincipal;
 }
 
 function cargarMenuPages() {
@@ -29,11 +29,48 @@ function cargarMenuPages() {
     }
   }
   menuPages += "</ul>";
-  document.getElementById("menuPages").innerHTML = menuPages;
+  return menuPages;
 }
 
-const init =()=>{
-  location.pathname.includes("index") ? cargarMenuPrincipal() : cargarMenuPages()
-}
+const cargarHeaderIndex = () => {
+  let header = ` <div class="caja">
+  <h1><img src="src/img/logo.webp" alt="${alt}" /></h1>
+  <nav id="menuPrincipal">
+  ${cargarMenuPrincipal()}
+  </nav>
+</div>`;
+  let footer = `  <img src="src/img/logo-blanco.webp" alt="${alt}" />
+<p id="copy-right">${copy_right}</p>`;
+  document.getElementById("header").innerHTML = header;
+  document.getElementById("footer").innerHTML = footer;
+};
 
-init()
+const cargarHeaderPages = () => {
+  let header = ` <div class="caja">
+  <h1><img src="../img/logo.webp" alt="${alt}" /></h1>
+  <nav id="menuPrincipal">
+  ${cargarMenuPages()}
+  </nav>
+</div>`;
+  let footer = ` <img src="../img/logo-blanco.webp" alt="${alt}" />
+<p id="copy-right">${copy_right}</p>`;
+  document.getElementById("header").innerHTML = header;
+  document.getElementById("footer").innerHTML = footer;
+};
+
+const init = () => {
+  location.pathname.includes("src/pages")
+    ? cargarHeaderPages()
+    : cargarHeaderIndex();
+  for (let index = 0; index < menuDireccion.length; index++) {
+    if (location.pathname.includes(menuDireccion[index])) 
+    {
+      title_page += menu[index];
+      break
+    }
+  }
+
+  title_page += "-Barbería Alura";
+  document.getElementById("title_page").innerHTML = title_page;
+};
+init();

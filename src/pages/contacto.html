@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title_page"></title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contacto.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main>
+      <form>
+        <label for="name-lastname">Nombre y Apellido</label>
+        <input required placeholder="" class="input-padron" type="text" id="name-lastname" />
+        <label for="email">Correo Electrónico</label>
+        <input required placeholder="ejemplo@gmail.com" class="input-padron" type="email" id="email" />
+        <label for="phone">Teléfono</label>
+        <input required placeholder="(XXX) XXX XXXX" class="input-padron" type="tel" id="phone" />
+        <label for="mensagge">Mensaje</label>
+        <textarea
+          id="mensagge"
+          class="input-padron"
+          cols="70"
+          rows="10"
+        ></textarea>
+
+        <fieldset>
+          <legend>¿Cómo le gustaria que le contactemos?</legend>
+          <label for="radio-email"
+            ><input type="radio" name="contacto" id="radio-email" />Email</label
+          >
+
+          <label for="radio-telefono"
+            ><input
+              type="radio"
+              name="contacto"
+              id="radio-telefono"
+            />Teléfono</label
+          >
+
+          <label for="radio-whatsapp"
+            ><input
+              type="radio"
+              name="contacto"
+              id="radio-whatsapp" checked
+            />Whatsapp</label
+          >
+        </fieldset>
+        <fieldset>
+            <legend>¿En cuál horario prefiere ser atendido?</legend>
+            <select>
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+        </fieldset>
+
+        <label class="checkbox" for="checkbox-pregunta">
+          <input type="checkbox" name="" id="checkbox-pregunta" checked/>
+          ¿Le gustaría recibir novedades de la barbería Alura?
+        </label>
+
+        <input type="submit" class="enviar" value="Enviar formulario" />
+      </form>
+      <table>
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Horario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lunes</td>
+                <td>08h ~ 20h</td>
+            </tr>
+            <tr>
+                <td>Miércoles</td>
+                <td>08h ~ 20h</td>
+            </tr>
+            <tr>
+                <td>Viernes</td>
+                <td>08h ~ 20h</td>
+            </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer id="footer"></footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
