@@ -11,7 +11,21 @@
   font-weight: bold;
 }
 
+/* main > p{
+  background: red;
+}
 
+img + p {
+  background: green;
+}
+
+img ~ p{
+  background: yellow;
+}
+
+.principal p:not(#mision){
+  background: orange;
+} */
 /* .titulo_principal::before{
   content: "[";
 }
@@ -44,7 +58,7 @@ p::first-line{
 
 .banner {
   max-height: 600px;
-  width: 90%;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -59,7 +73,7 @@ em strong {
 }
 
 .utensillo {
-  width: 35%;
+  width: calc(40% - (26px*2));
   float: left;
   margin: 0 20px 20px 0;
 }
@@ -116,6 +130,12 @@ em strong {
 
 .imagen-diferenciales {
   width: 50%;
+  transition: 400ms;
+  box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-diferenciales:hover{
+  opacity: 10%;
 }
 
 .video {

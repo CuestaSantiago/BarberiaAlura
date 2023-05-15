@@ -70,7 +70,7 @@ const init = () => {
     }
   }
 
-  title_page += "-Barbería Alura";
+  title_page += " Barbería Alura";
   document.getElementById("title_page").innerHTML = title_page;
 };
 init();
